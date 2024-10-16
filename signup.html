@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Fintech Super App</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="signup.js"></script>
+</head>
+
+<body>
+    <div class="signup-container">
+        <header class="signup-header">
+            <img src="fintech super app logo.jpeg" alt="Company Logo" width="200" height="200">
+            <h1>Registration</h1>
+        </header>
+        <form id="signupForm">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <h2>Name</h2>
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="secondName" placeholder="Second Name" required>
+                <input type="text" id="thirdName" placeholder="Third Name (optional)" optional>
+                <input type="text" id="fourthName" placeholder="Fourth Name (optional)" optional>
+            </div>
+            <div class="input-group">
+                <h2>Location</h2>
+                <input type="text" id="country" placeholder="Country" required>
+                <select name="options" id="countyOptions">
+                    <option value="choice1">County</option>
+                    <option value="choice2">State</option>
+                    <option value="choice3">Province</option>
+                    <option value="choice4">Canton</option>
+                    <option value="choice5">Region</option>
+                </select>
+                <input type="text" id="location" placeholder="County/State/Province" required>
+                <input type="text" id="city" placeholder="City/Town" required>
+                <input type="text" id="address" placeholder="Address (optional)" optional>
+            </div>
+            <div class="container">
+                <h2>D.O.B</h2>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="input-group">
+                <h2>Identification</h2>
+                <select name="idType" id="idType">
+                    <option value="" disabled selected>Identification Type</option>
+                    <option value="national_id">National Identity</option>
+                    <option value="passport">Passport</option>
+                    <option value="visa">Visa</option>
+                    <option value="none">None</option>
+                </select>
+                <input type="text" id="identityNumber" placeholder="Identity Number" required>
+                <label for="Image">Image</label>
+                <input type="file" id="fileInput" accept="image/*" onchange="previewImage()">
+                <div id="imagePreviewContainer">
+                    <img id="imagePreview" src="" alt="Image Preview" style="display: none;">
+                </div>
+            </div>
+            <div class="container">
+                <h2>Gender</h2>
+                <select name="gender" id="gender">
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="transgender">Transgender</option>
+                    <option value="prefer_not_to_say">Rather not say</option>
+                </select>
+            </div>
+            <h1>Account Verification</h1>
+            <div class="input-group">
+                <h2>Username</h2>
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <h2>Contact</h2>
+                <input type="text" id="contact" placeholder="Email/Phone Number" required>
+                <button type="button">Get Code</button>
+            </div>
+            <div class="input-group">
+                <h2>Password</h2>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree with the <a href="terms.html">Terms and Conditions</a></label>
+            </div>
+            <button type="submit" class="btn-primary">Sign Up</button>
+        </form>
+        <div class="login-redirect">
+            <p>Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').onsubmit = function (event) {
+            event.preventDefault(); // Prevent form submission for demo
+            alert('Signup successful! Redirecting to Login page...');
+            // Redirect to login page
+            window.location.href = 'login.html';
+        };
+    </script>
+</body>
+
+</html>

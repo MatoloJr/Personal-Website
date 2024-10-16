@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Fintech Super App</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <header class="login-header">
+            <img src="fintech super app logo.jpeg" alt="Company Logo" width="200" height="200">
+            <h1>Login into Your Account</h1>
+        </header>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Username</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="remember_me" name="remember_me">
+                <label for="remember_me">Remember Me</label>
+            </div>
+            <button type="submit" class="btn-primary">Login</button>
+            <a href="forgot_password.html" class="forgot-password">Forgot Password?</a>
+        </form>
+
+        <div class="signup-redirect">
+            <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').onsubmit = function (event) {
+            event.preventDefault(); // Prevent form submission for demo
+            alert('Login successful! Redirecting to Home page...');
+            // Redirect to home page
+            window.location.href = 'home.html';
+        };
+    </script>
+</body>
+
+</html>

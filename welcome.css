@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.welcome-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.welcome-header img {
+    border-radius: 50%;
+}
+
+.welcome-header h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.welcome-header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.welcome-actions {
+    margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}

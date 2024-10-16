@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Super App</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu-icon" onclick="openMenu()">
+            <!-- 3 small straight lines icon -->
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+            <!-- Add the JS function here -->
+        <script>
+            function openMenu() {
+                    window.location.href = 'menu.html';  // Make sure 'menu.html' is in the correct relative path
+                }
+        </script>
+        
+        <div class="profile-icon">
+            <img src="images/profile_placeholder.jpg" onclick="openProfilePage()">
+        </div>
+        <script>
+            function openProfilePage() {
+                window.location.href = 'profile.html';  // Redirect to the profile page
+            }
+        </script>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+    <!-- search bar -->
+        <div class="search-bar">
+            <input type="text" id="inputField" placeholder="Search..." required>
+        </div>
+                
+        <script>
+            const placeholders = [
+                "Search for products",
+                "Search for services",
+                "Search for categories",
+                "Search by name",
+                "Search by location"
+                ];
+
+                let currentIndex = 0;
+                    const inputField = document.getElementById('inputField');
+
+                function rotatePlaceholder() {
+                    inputField.setAttribute('placeholder', placeholders[currentIndex]);
+                    currentIndex = (currentIndex + 1) % placeholders.length;
+                    }
+
+                    // Set the initial placeholder and start the interval
+                    setInterval(rotatePlaceholder, 2000); // Change every 2 seconds
+        </script>
+
+        <!-- Currency Balance Section -->
+        <section class="balance-section">
+            <div class="currency-tabs">
+                <!-- Left column with 2 stacked boxes -->
+                <div class="left-column">
+                    <div class="box currency-box">USD: $1,200</div>
+                    <div class="box currency-box">EUR: €900</div>
+                </div>
+            
+                <!-- Center box (height = left-column + right-column combined) -->
+                <div class="center-box">
+                    <div class="currency-box main-balance">KES: KSh 150,000</div>
+                </div>
+            
+                <!-- Right column with 2 stacked boxes -->
+                <div class="right-column">
+                    <div class="box currency-box">GBP: £800</div>
+                    <div class="box currency-box">ZAR: R10,000</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Transactions -->
+        <section class="recent-transactions">
+            <h3>Recent Transactions</h3>
+            <div class="transaction-list">
+                <div class="transaction-item">Sent $100 to John Doe</div>
+                <div class="transaction-item">Received €50 from Jane Smith</div>
+                <div class="transaction-item">Paid R200 for groceries</div>
+            </div>
+        </section>
+
+        <!-- Service Categories -->
+        <section class="service-categories">
+            <h3>Services</h3>
+            <div class="category-tabs">
+                <div class="category-item">
+                    <span>Payment</span>
+                    <span class="more">More</span>
+                </div>
+                <div class="category-item">A</div>
+                <div class="category-item">B</div>
+                <div class="category-item">C</div>
+                <div class="category-item">D</div>
+                <div class="category-item">E</div>
+            </div>
+            <!-- Add more service categories here -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-tab">
+            <img src="images/qr_icon.png" alt="QR Code" onclick="generateQRCode()">
+            <p>Payment</p>
+        </div>
+        <div class="footer-tab">
+            <img src="images/qr_icon.png" alt="QR Code" onclick="sendMoney()">
+            <p>Send Money</p>
+        </div>
+        <div class="footer-tab">
+            <img src="images/qr_icon.png" alt="QR Code" onclick="withdraw()">
+            <p>Withdraw</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
